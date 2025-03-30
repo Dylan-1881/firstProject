@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traudt's Barber Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('barbershopStockPhoto.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            text-align: center;
+            min-height: 100vh; /* Ensures the page takes at least the full screen height */
+            overflow-y: scroll; /* Ensure scrolling is enabled */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            width: 80%;
+            max-width: 300px;
+            background-color: rgba(51, 51, 51, 0.7);
+            border: 1px solid #555;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #555;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        /* Prices Section */
+        .prices {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(51, 51, 51, 0.7);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            margin-bottom: 100px; /* Ensure space for footer */
+        }
+
+        .price-item {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Positioning */
+        footer {
+            position: relative;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Traudt's Barber Shop</h1>
+    <p>What's your name?</p>
+    <input type="text" id="name-input" placeholder="Enter your name" />
+    <button onclick="submitName()">Submit</button>
+
+    <!-- Prices Section -->
+    <div class="prices">
+        <h2>Our Services & Prices</h2>
+        <div class="price-item">Haircut - $20</div>
+        <div class="price-item">Beard Trim - $15</div>
+        <div class="price-item">Shampoo & Style - $25</div>
+        <div class="price-item">Complete Grooming - $40</div>
+    </div>
+
+    <footer>
+        <p>- Created by Dylan Traudt</p>
+    </footer>
+
+    <script>
+        function submitName() {
+            const name = document.getElementById("name-input").value;
+            if (name) {
+                alert(`Welcome, ${name}!`);
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+    </script>
+</body>
+</html>
